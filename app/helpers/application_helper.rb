@@ -6,4 +6,12 @@ module ApplicationHelper
   def display_alert
     content_tag(:p, alert, class: "alert") if alert.present?
   end
+
+  def display_right_navbar_option
+    if user_signed_in?
+      render 'dropdown_options'
+    else
+      render 'login_buttons'
+    end
+  end
 end
