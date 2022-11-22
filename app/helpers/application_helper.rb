@@ -14,4 +14,8 @@ module ApplicationHelper
       render 'login_buttons'
     end
   end
+
+  def display_active_class(link_page)
+    "active" if current_page?(link_page)
+  end
 end
