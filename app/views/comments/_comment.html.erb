@@ -1,5 +1,6 @@
 <div>
   <p>Comment: <%= comment.body %></p>
   <p>Author: <%= comment.user.name %></p>
+  <p><%= time_ago_in_words(comment.created_at) %> ago</p>
 </div>
 <hr />

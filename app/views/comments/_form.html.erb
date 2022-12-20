@@ -1,0 +1,10 @@
+<%= form_with(model: [post, comment]) do |form| %>
+  <div>
+    <%= form.label :body, style: "display: block" %>
+    <%= form.text_area :body, required: true %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
